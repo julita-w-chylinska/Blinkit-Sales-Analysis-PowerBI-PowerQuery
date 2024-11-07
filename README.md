@@ -1,1 +1,1 @@
-# blinkit-sales-project-PowerBI
+# Blinkit Sales Analysis (PowerBI)
