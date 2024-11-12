@@ -1,1 +1,1 @@
-# Blinkit Sales Analysis (PowerBI)
+# Blinkit Sales Analysis (Power BI & Power Query)
