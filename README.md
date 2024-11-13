@@ -31,7 +31,7 @@ This project demonstrates data analysis of ***blinkit***, an Indian last-minute 
   - Cleaning 'Item Fat Content' Values: Standardized the values in the 'Item Fat Content' column by replacing inconsistent entries.
   - Rounding 'Item Visibility' Values: Duplicated the 'Item Visibility' column and rounded off the values to two decimal places in the new column.
 
-  Each step name has been manually adjusted to clearly reflect it's content. This way, anyone taking over the project can intuitively understand the purpose of each step.
+  Each step's name has been manually adjusted to clearly reflect it's content. This way, anyone taking over the project can intuitively understand the purpose of each step.
 
   Query code (M language):
   ```M
