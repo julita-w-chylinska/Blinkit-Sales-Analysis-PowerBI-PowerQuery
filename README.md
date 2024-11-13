@@ -72,3 +72,4 @@ No. of Different Products = DISTINCTCOUNT('BlinkIT Grocery Data'[Item Identifier
 No. of Sold Items = COUNTROWS('BlinkIT Grocery Data')
 Total Sales = SUM('BlinkIT Grocery Data'[Sales])
 ```
+dfdsfdsfsdf
