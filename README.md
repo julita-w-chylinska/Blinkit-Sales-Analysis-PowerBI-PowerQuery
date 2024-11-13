@@ -19,7 +19,7 @@ This project demonstrates data analysis of blinkit, an Indian last-minute grocer
 
 ## Project Structure
 
-### Performing data cleaning and transformation
+### 1. Performing data cleaning and transformation
 - **Initial data exploration**
 
   The dataset consisted of grocery sales data extracted from Excel. Data walkthrough revealed the following fields:
@@ -63,5 +63,12 @@ This project demonstrates data analysis of blinkit, an Indian last-minute grocer
   in
     #"Removed Duplicates From 'Outlet Identifier' Column"
 
-sdafafsd
-  
+### 2. Data calculations
+
+```DAX
+Avg Rating = AVERAGE('BlinkIT Grocery Data'[Rating])
+Avg Sales = AVERAGE('BlinkIT Grocery Data'[Sales])
+No. of Different Products = DISTINCTCOUNT('BlinkIT Grocery Data'[Item Identifier])
+No. of Sold Items = COUNTROWS('BlinkIT Grocery Data')
+Total Sales = SUM('BlinkIT Grocery Data'[Sales])
+```
