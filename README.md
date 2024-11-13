@@ -45,7 +45,7 @@ This project demonstrates data analysis of blinkit, an Indian last-minute grocer
     #"Duplicated Column 'Item Visibility'" = Table.DuplicateColumn(#"Capitalized Each Word in 'Item Fat Content'", "Item Visibility", "Item Visibility (rounded)"),
     #"Rounded Off the Values in New Column" = Table.TransformColumns(#"Duplicated Column 'Item Visibility'",{{"Item Visibility (rounded)", each Number.Round(_, 2), type number}}),
     #"Reordered Column 'Item Visibility (rounded)'" = Table.ReorderColumns(#"Rounded Off the Values in New Column",{"Item Fat Content", "Item Identifier", "Item Type", "Outlet Establishment Year", "Outlet Identifier", "Outlet Location Type", "Outlet Size", "Outlet Type", "Item Visibility", "Item Visibility (rounded)", "Item Weight", "Sales", "Rating"})
-in
+  in
     #"Reordered Column 'Item Visibility (rounded)'"
 ```
 
