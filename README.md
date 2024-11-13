@@ -127,15 +127,16 @@ in
 
 These are the few business insights which would be provided for client:
 
-**1. Fat Content influence:**
+**1. Fat content influence:**
 Low-fat items are sold more frequently than regular items, suggesting a consumer preference for healthier options. BlinkIT could consider expanding the low-fat product range.
 
-**2. Outlet Size and No. of Sold Items correlation:**
-Medium-sized outlets show the highest quantity of items saled compared to small and high-sized outlets, but the reason is (...).
-
-**3. Outlet Type with the lowest rating:**
+**2. Outlet type with the lowest rating:**
 The 'Supermarket Type3' outlet type has the lowest rating among all four outlet types. While the difference is small, it may be worth investigating the reasons behind this and potentially improving the performance of these outlets.
 
-**4. Impact of Item Visibility on Sales:**
+**3. Impact of item visibility on sales:**
 The data indicates a peak in item sales at a visibility level of around 0,03. Beyond this point, sales start to decline as visibility increases. This trend suggests that items with very high visibility might not necessarily drive higher sales, possibly due to factors like overexposure or saturation. The fact that items with 0 visibility still show relatively high sales suggests that many customers are purchasing these items without needing direct prompts or promotions in the app. This could happen for several reasons like high customer awareness and loyalty to some brands or effective search functionality.
+
+**4. Impact of outlet establishment year on sales:**
+The average sales for outlets established in 2011 and 2018 are lower than those of outlets from other years and it may be worth investigating this the factors. One possible explanation could be unique organizational models introduced in these specific years that haven't resonated as well with customers. Additionally, heightened competition around the time of these outlets' openings may have impacted their ability to capture and retain market share effectively, resulting in lower performance.
+
 
