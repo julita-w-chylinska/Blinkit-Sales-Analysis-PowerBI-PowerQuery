@@ -84,7 +84,7 @@ Metrics = {
     ("No. of Sold Items", NAMEOF('BlinkIT Grocery Data'[No. of Sold Items]), 1),
     ("No. of Different Products", NAMEOF('BlinkIT Grocery Data'[No. of Different Products]), 2)
 }
-
+```
 - Built interactive Power BI dashboards using many kinds of visualisations such as KPI cards, donut chart, pie charts, bar charts, line chart, scatter plot and table with conditional formatting.
 - Optimized the numerical data presentation by configuring every visualisation settings (displaing units, valuing decimal places) to enhance clarity and readability.
 - Added filter panel with "clear all slicers" and "go back to the main report" buttons.
@@ -92,5 +92,30 @@ Metrics = {
 
 ![Report_1_before](blinkit_report_PrtSc_1.png)
 ![Report_2_before](blinkit_report_PrtSc_2.png)
+
+### 4. Analyzing results
+
+The initial dashboard displayed incorrect data for number of outlets by outlets size. A thorough check of this data in Power Query allowed to identify the problem, which was the discrepancy in the declared size of three of the ten outlets. To fix the problem, one size was chosen for each of these three outlets, and the correction was made using Conditional Column function in Power Query.
+**Note: In a real-world scenario, this correction would be made after consulting with the client to confirm the accurate sizes.**
+
+Full query code (M language) after correction:
+```M
+let
+    Źródło = Excel.Workbook(File.Contents("C:\Users\julit\Pulpit\Analiza_danych_nauka\portfolio\Projekty\BlinkIT Grocery Data.xlsx"), null, true),
+    #"BlinkIT Grocery Data_Sheet" = Źródło{[Item="BlinkIT Grocery Data",Kind="Sheet"]}[Data],
+    #"Promoted Headers" = Table.PromoteHeaders(#"BlinkIT Grocery Data_Sheet", [PromoteAllScalars=true]),
+    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Item Fat Content", type text}, {"Item Identifier", type text}, {"Item Type", type text}, {"Outlet Establishment Year", Int64.Type}, {"Outlet Identifier", type text}, {"Outlet Location Type", type text}, {"Outlet Size", type text}, {"Outlet Type", type text}, {"Item Visibility", type number}, {"Item Weight", type number}, {"Sales", type number}, {"Rating", Int64.Type}}),
+    #"Replaced Value (LF -> Low Fat)" = Table.ReplaceValue(#"Changed Type","LF","Low Fat",Replacer.ReplaceText,{"Item Fat Content"}),
+    #"Replaved Value (reg -> Regular)" = Table.ReplaceValue(#"Replaced Value (LF -> Low Fat)","reg","Regular",Replacer.ReplaceText,{"Item Fat Content"}),
+    #"Capitalized Each Word in 'Item Fat Content'" = Table.TransformColumns(#"Replaved Value (reg -> Regular)",{{"Item Fat Content", Text.Proper, type text}}),
+    #"Duplicated Column 'Item Visibility'" = Table.DuplicateColumn(#"Capitalized Each Word in 'Item Fat Content'", "Item Visibility", "Item Visibility (rounded)"),
+    #"Rounded Off the Values in New Column" = Table.TransformColumns(#"Duplicated Column 'Item Visibility'",{{"Item Visibility (rounded)", each Number.Round(_, 2), type number}}),
+    #"Reordered Column 'Item Visibility (rounded)'" = Table.ReorderColumns(#"Rounded Off the Values in New Column",{"Item Fat Content", "Item Identifier", "Item Type", "Outlet Establishment Year", "Outlet Identifier", "Outlet Location Type", "Outlet Size", "Outlet Type", "Item Visibility", "Item Visibility (rounded)", "Item Weight", "Sales", "Rating"}),
+    #"Added Conditional Column 'Outlet Size PROPER'" = Table.AddColumn(#"Reordered Column 'Item Visibility (rounded)'", "Outlet Size PROPER", each if [Outlet Identifier] = "OUT010" then "Medium" else if [Outlet Identifier] = "OUT017" then "High" else if [Outlet Identifier] = "OUT045" then "High" else [Outlet Size]),
+    #"Removed Column 'Outlet Size'" = Table.RemoveColumns(#"Added Conditional Column 'Outlet Size PROPER'",{"Outlet Size"}),
+    #"Renamed Column 'Outlet Size PROPER' to 'Outlet Size'" = Table.RenameColumns(#"Removed Column 'Outlet Size'",{{"Outlet Size PROPER", "Outlet Size"}}),
+    #"Reordered Column 'Outlet Size'" = Table.ReorderColumns(#"Renamed Column 'Outlet Size PROPER' to 'Outlet Size'",{"Item Fat Content", "Item Identifier", "Item Type", "Outlet Establishment Year", "Outlet Identifier", "Outlet Location Type", "Outlet Size", "Outlet Type", "Item Visibility", "Item Visibility (rounded)", "Item Weight", "Sales", "Rating"})
+in
+    #"Reordered Column 'Outlet Size'"
 
 
