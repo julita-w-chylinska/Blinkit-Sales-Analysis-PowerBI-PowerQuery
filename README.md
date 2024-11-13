@@ -12,7 +12,7 @@ This project demonstrates data analysis of blinkit, an Indian last-minute grocer
 ## Objectives
 
 1. **Perform data cleaning and transformation**: Ensure the dataset is accurate and ready for analysis by resolving data inconsistencies and adjusting the form of data, creating additional columns if needed.
-2. **Data calculations**: Create DAX measures in Power BI to calculate and display various Key Performance Indicators (KPIs).
+2. **Provide data calculations**: Create DAX measures in Power BI to calculate and display various Key Performance Indicators (KPIs).
 3. **Visualize data**: Build interactive Power BI dashboards to uncover key correlations and enable stakeholders to explore the data dynamically.
 4. **Analyze results**: Carefully analyze all charts and other visualizations to draw conclusions and detect any previously unnoticed data inconsistencies.
 5. **Generate Business Insights**: Provide actionable insights to aid decision-making, including outlet performance, sales trends, and product visibility.
@@ -63,7 +63,9 @@ This project demonstrates data analysis of blinkit, an Indian last-minute grocer
   in
     #"Removed Duplicates From 'Outlet Identifier' Column"
 
-### 2. Data calculations
+### 2. Providing data calculations
+
+Created the following measures in Power BI using DAX language:
 
 ```DAX
 Avg Rating = AVERAGE('BlinkIT Grocery Data'[Rating])
@@ -72,4 +74,11 @@ No. of Different Products = DISTINCTCOUNT('BlinkIT Grocery Data'[Item Identifier
 No. of Sold Items = COUNTROWS('BlinkIT Grocery Data')
 Total Sales = SUM('BlinkIT Grocery Data'[Sales])
 ```
-dfdsfdsfsdf
+### 3. Visualizing data
+
+Built interactive Power BI dashboards using many kinds of visualisations such as KPI cards, donut chart, pie charts, bar charts, line chart, scatter plot and table with conditional formatting.
+
+![Report_1_before](blinkit_report_PrtSc_1.png)
+![Report_2_before](blinkit_report_PrtSc_2.png)
+
+
