@@ -47,10 +47,21 @@ This project demonstrates data analysis of blinkit, an Indian last-minute grocer
     #"Reordered Column 'Item Visibility (rounded)'" = Table.ReorderColumns(#"Rounded Off the Values in New Column",{"Item Fat Content", "Item Identifier", "Item Type", "Outlet Establishment Year", "Outlet Identifier", "Outlet Location Type", "Outlet Size", "Outlet Type", "Item Visibility", "Item Visibility (rounded)", "Item Weight", "Sales", "Rating"})
   in
     #"Reordered Column 'Item Visibility (rounded)'"
-```
 
 - **Creating additional query**
 
   Created a new query by referencing the main query to analyze total sales by outlet and showing their establishment year.
 
+  Query code (M language):
+  ```M
+  let
+    Source = #"BlinkIT Grocery Data",
+    #"Grouped Rows (Total Sales by Outlet Identifier)" = Table.Group(Source, {"Outlet Identifier"}, {{"Total Sales in Particular Outlet", each List.Sum([Sales]), type nullable number}}),
+    #"Merged Queries" = Table.NestedJoin(#"Grouped Rows (Total Sales by Outlet Identifier)", {"Outlet Identifier"}, #"BlinkIT Grocery Data", {"Outlet Identifier"}, "BlinkIT Grocery Data", JoinKind.LeftOuter),
+    #"Expanded BlinkIT Grocery Data With Column 'Outlet Establishment Year'" = Table.ExpandTableColumn(#"Merged Queries", "BlinkIT Grocery Data", {"Outlet Establishment Year"}, {"Outlet Establishment Year"}),
+    #"Removed Duplicates From 'Outlet Identifier' Column" = Table.Distinct(#"Expanded BlinkIT Grocery Data With Column 'Outlet Establishment Year'", {"Outlet Identifier"})
+  in
+    #"Removed Duplicates From 'Outlet Identifier' Column"
+
+sdafafsd
   
