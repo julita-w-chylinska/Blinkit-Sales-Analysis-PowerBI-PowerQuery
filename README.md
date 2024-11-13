@@ -139,4 +139,8 @@ The data indicates a peak in item sales at a visibility level of around 0,03. Be
 **4. Impact of outlet establishment year on sales:**
 The average sales for outlets established in 2011 and 2018 are lower than those of outlets from other years and it may be worth investigating this the factors. One possible explanation could be unique organizational models introduced in these specific years that haven't resonated as well with customers. Additionally, heightened competition around the time of these outlets' openings may have impacted their ability to capture and retain market share effectively, resulting in lower performance.
 
+## Author: Julita Wawreszuk-Chylińska (based on Data Tutorials project)
 
+**LinkedIn**: [Julita Wawreszuk-Chylińska](https://www.linkedin.com/in/julita-wawreszuk-chylińska/)
+
+Thank you for your interest in this project!
