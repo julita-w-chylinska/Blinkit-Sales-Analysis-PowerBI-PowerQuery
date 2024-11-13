@@ -96,7 +96,7 @@ Metrics = {
 ### 4. Analyzing results
 
 The initial dashboard displayed incorrect data for number of outlets by outlets size. A thorough check of this data in Power Query allowed to identify the problem, which was the discrepancy in the declared size of three of the ten outlets. To fix the problem, one size was chosen for each of these three outlets, and the correction was made using Conditional Column function in Power Query.
-**Note: In a real-world scenario, this correction would be made after consulting with the client to confirm the accurate sizes.**
+***Note: In a real-world scenario, this correction would be made after consulting with the client to confirm the accurate sizes.***
 
 Full query code (M language) after correction:
 ```M
@@ -118,4 +118,5 @@ let
 in
     #"Reordered Column 'Outlet Size'"
 
+**The final apperance of the Power BI report:**
 
