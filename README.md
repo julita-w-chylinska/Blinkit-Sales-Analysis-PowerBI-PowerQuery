@@ -76,7 +76,19 @@ Total Sales = SUM('BlinkIT Grocery Data'[Sales])
 ```
 ### 3. Visualizing data
 
-Built interactive Power BI dashboards using many kinds of visualisations such as KPI cards, donut chart, pie charts, bar charts, line chart, scatter plot and table with conditional formatting.
+- Created a metrics table to facilitate the creation of "Total Sales", "No. of Sold Items" and "No. of Different Products" buttons in the report.
+
+```DAX
+Metrics = {
+    ("Total Sales", NAMEOF('BlinkIT Grocery Data'[Total Sales]), 0),
+    ("No. of Sold Items", NAMEOF('BlinkIT Grocery Data'[No. of Sold Items]), 1),
+    ("No. of Different Products", NAMEOF('BlinkIT Grocery Data'[No. of Different Products]), 2)
+}
+
+- Built interactive Power BI dashboards using many kinds of visualisations such as KPI cards, donut chart, pie charts, bar charts, line chart, scatter plot and table with conditional formatting.
+- Optimized the numerical data presentation by configuring every visualisation settings (displaing units, valuing decimal places) to enhance clarity and readability.
+- Added filter panel with "clear all slicers" and "go back to the main report" buttons.
+- Ensured that the colors and style of the report were consistent.
 
 ![Report_1_before](blinkit_report_PrtSc_1.png)
 ![Report_2_before](blinkit_report_PrtSc_2.png)
