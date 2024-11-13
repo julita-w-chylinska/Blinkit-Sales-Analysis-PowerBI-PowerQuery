@@ -4,7 +4,7 @@
 
 **Level**: Intermediate  
 
-This project demonstrates data analysis of blinkit, an Indian last-minute grocery delivery app. The goal was to analyze sales with operational data to uncover insights for business improvement but also to present data to the client in the most accessible way possible. The analysis involved data preparation, transformation, calculation and visualization using **Power BI** and **Power Query**.
+This project demonstrates data analysis of blinkit, an Indian last-minute grocery delivery app. The goal was to analyze sales and operational data to uncover insights for business improvement and present the findings on a dashboard in a clear and accessible way for the client. The analysis involved data preparation, transformation, calculation and visualization using **Power BI** and **Power Query**.
 
 ![Dashboard Overview](blinkit_report_PrtSc_1_FIXED.png)
 
