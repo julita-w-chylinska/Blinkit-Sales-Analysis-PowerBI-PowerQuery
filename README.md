@@ -19,9 +19,10 @@ This project demonstrates data analysis of blinkit, an Indian last-minute grocer
 
 ## Project Structure
 
-### 1. Initial Data Exploration
+### Performing data cleaning and transformation
+- Initial data exploration
 
-The dataset consisted of grocery sales data extracted from Excel. Initial exploration revealed the following fields:
+The dataset consisted of grocery sales data extracted from Excel. Data walkthrough revealed the following fields:
 - **Item Details**: `Item Fat Content`, `Item Identifier`, `Item Type`, `Item Visibility`, etc.
 - **Outlet Details**: `Outlet Identifier`, `Outlet Size`, `Outlet Type`, `Establishment Year`, etc.
 
