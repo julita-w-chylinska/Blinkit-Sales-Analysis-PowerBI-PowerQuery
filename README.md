@@ -26,4 +26,5 @@ This project demonstrates data analysis of blinkit, an Indian last-minute grocer
   - **Item Details**: `Item Fat Content`, `Item Identifier`, `Item Type`, `Item Visibility`, etc.
   - **Outlet Details**: `Outlet Identifier`, `Outlet Size`, `Outlet Type`, `Establishment Year`, etc.
 
-### 2. Data Preparation in Power Query
+- Data preparation in Power Query
+  hfghfg
