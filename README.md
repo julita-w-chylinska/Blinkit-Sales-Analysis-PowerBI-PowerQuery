@@ -21,7 +21,7 @@ This project demonstrates data analysis of blinkit, an Indian last-minute grocer
 ### 1. Performing data cleaning and transformation
 - **Initial data exploration**
 
-  The dataset consisted of grocery sales data extracted from Excel. Data walkthrough revealed the following fields:
+  The dataset (file named `BlinkIT Grocery Data.xlsx`) consisted of grocery sales data extracted from Excel. Data walkthrough revealed the following fields:
   - Item Details: `Item Fat Content`, `Item Identifier`, `Item Type`, `Item Visibility`, etc.
   - Outlet Details: `Outlet Identifier`, `Outlet Size`, `Outlet Type`, `Establishment Year`, etc.
 
@@ -119,8 +119,11 @@ in
 ```
 
 **The final apperance of the Power BI report:**
+
 ![Report_1_FIXED](blinkit_report_PrtSc_1_FIXED.png)
 ![Report_2_FIXED](blinkit_report_PrtSc_2_FIXED.png)
+
+(For full access to interactive dashboards – please download the file named `blinkit_PowerBI_report.pbix`)
 
 ### 5. Generating business insights:
 
