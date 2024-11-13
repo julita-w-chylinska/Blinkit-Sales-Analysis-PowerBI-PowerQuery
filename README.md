@@ -15,7 +15,7 @@ This project demonstrates data analysis of blinkit, an Indian last-minute grocer
 2. **Provide data calculations**: Create DAX measures in Power BI to calculate and display various Key Performance Indicators (KPIs).
 3. **Visualize data**: Build interactive Power BI dashboards to uncover key correlations and enable stakeholders to explore the data dynamically.
 4. **Analyze results**: Carefully analyze all charts and other visualizations to draw conclusions and detect any previously unnoticed data inconsistencies.
-5. **Generate Business Insights**: Provide actionable insights to aid decision-making, including outlet performance, sales trends, and product visibility.
+5. **Generate business insights**: Provide actionable insights to aid decision-making, including outlet performance, sales trends, and product visibility.
 
 ## Project Structure
 
@@ -117,6 +117,25 @@ let
     #"Reordered Column 'Outlet Size'" = Table.ReorderColumns(#"Renamed Column 'Outlet Size PROPER' to 'Outlet Size'",{"Item Fat Content", "Item Identifier", "Item Type", "Outlet Establishment Year", "Outlet Identifier", "Outlet Location Type", "Outlet Size", "Outlet Type", "Item Visibility", "Item Visibility (rounded)", "Item Weight", "Sales", "Rating"})
 in
     #"Reordered Column 'Outlet Size'"
+```
 
 **The final apperance of the Power BI report:**
+![Report_1_FIXED](blinkit_report_PrtSc_1_FIXED.png)
+![Report_2_FIXED](blinkit_report_PrtSc_2_FIXED.png)
+
+### 5. Generating business insights:
+
+These are the few business insights which would be provided for client:
+
+**1. Fat Content influence:**
+Low-fat items are sold more frequently than regular items, suggesting a consumer preference for healthier options. BlinkIT could consider expanding the low-fat product range.
+
+**2. Outlet Size and No. of Sold Items correlation:**
+Medium-sized outlets show the highest quantity of items saled compared to small and high-sized outlets, but the reason is (...).
+
+**3. Outlet Type with the lowest rating:**
+The 'Supermarket Type3' outlet type has the lowest rating among all four outlet types. While the difference is small, it may be worth investigating the reasons behind this and potentially improving the performance of these outlets.
+
+**4. Impact of Item Visibility on Sales:**
+The data indicates a peak in item sales at a visibility level of around 0,03. Beyond this point, sales start to decline as visibility increases. This trend suggests that items with very high visibility might not necessarily drive higher sales, possibly due to factors like overexposure or saturation. The fact that items with 0 visibility still show relatively high sales suggests that many customers are purchasing these items without needing direct prompts or promotions in the app. This could happen for several reasons like high customer awareness and loyalty to some brands or effective search functionality.
 
