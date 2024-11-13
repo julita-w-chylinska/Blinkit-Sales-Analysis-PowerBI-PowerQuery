@@ -27,9 +27,11 @@ This project demonstrates data analysis of ***blinkit***, an Indian last-minute 
 
 - **Data preparation in Power Query**
 
-  The data exhibited a reasonable level of quality so data preparation involved merely two actions taken in several Power Query steps before creating visualizations in Power BI:
+  The data exhibited a reasonable level of quality so data preparation involved only two actions taken in several Power Query steps before creating visualizations in Power BI:
   - Cleaning 'Item Fat Content' Values: Standardized the values in the 'Item Fat Content' column by replacing inconsistent entries.
   - Rounding 'Item Visibility' Values: Duplicated the 'Item Visibility' column and rounded off the values to two decimal places in the new column.
+
+  Each step name has been manually adjusted to clearly reflect it's content. This way, anyone taking over the project can intuitively understand the purpose of each step.
 
   Query code (M language):
   ```M
